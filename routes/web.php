@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/sales.clean', function () {
+Route::get('/', function () {
     return view('layouts.app');
 });
 

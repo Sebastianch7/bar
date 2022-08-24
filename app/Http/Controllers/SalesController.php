@@ -78,13 +78,13 @@ class SalesController extends Controller
      * @param  \App\Sales  $sales
      * @return \Illuminate\Http\Response
      */
-    public function edit(Sales $sales)
+    public function edit($sales)
     {
-         return view('sales.edit', [
-            'client' => $sales->id,
+        return view('sales.edit', [
+            'client' => $sales,
             'sales' => DB::table('sales')
             ->join('storages', 'storages.id','=','sales.idStorage')
-            ->where('sales.client','=', $sales->id)
+            ->where('sales.client','=', $sales)
             ->select('sales.client','sales.cant','sales.total','storages.name as product')->get()
         ]);
     }

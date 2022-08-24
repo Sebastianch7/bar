@@ -15,11 +15,11 @@
             @endforeach
           </div>
         @endif
-        <form action="{{ route('storage.update', $storage[0]->id) }}" method="POST">
+        <form action="{{ route('storage.update', $storage->id) }}" method="POST">
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="idCategory">Categoria</label>
-              <select class="form-control" name="idCategory" value=" {{$storage[0]->idCategory }}">
+              <select class="form-control" name="idCategory" value=" {{$storage->idCategory }}">
                 @foreach($categories as $category)
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
                 @endforeach
@@ -27,17 +27,17 @@
             </div>
             <div class="form-group col-md-6">
               <label for="name">Nombre</label>
-              <input type="text" class="form-control" name="name" value=" {{$storage[0]->name }}">
+              <input type="text" class="form-control" name="name" value=" {{$storage->name }}">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group col-md-6">
               <label for="price">Precio</label>
-              <input type="text" class="form-control" name="price" value=" {{$storage[0]->price }}">
+              <input type="text" class="form-control" name="price" value=" {{$storage->price }}">
             </div>
             <div class="form-group col-md-6">
               <label for="total">Cantidad</label>
-              <input type="text" class="form-control" name="total" value=" {{$storage[0]->total }}">
+              <input type="text" class="form-control" name="total" value=" {{$storage->total }}">
             </div>
           </div>
           @csrf

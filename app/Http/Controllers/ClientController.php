@@ -14,7 +14,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -24,7 +24,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        
+        return view('client.create');
     }
 
     /**
@@ -36,7 +36,9 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         Client::create([
+            'name' => $request->name,
             'state' => '1',
+            'pay' => '1'
           ]);
           return redirect('/sales')->with('status','La cuenta ha sido creada.');
     }

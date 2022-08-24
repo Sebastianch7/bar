@@ -6,7 +6,7 @@
     <h1>Administrador de cuentas</h1>
   </div>
   <div class="col-lg-4 col-md-12 col-sm-12 text-right">
-    <a class="btn btn-dark" href="{{ route('client.index') }}">Nueva cuenta</a>
+    <a class="btn btn-dark" href="{{ route('client.create') }}">Nueva cuenta</a>
   </div>
 </div>
 
@@ -20,7 +20,7 @@
                 <table class="table table-hover">
                     <thead class="thead-dark">
                         <tr>
-                            <th colspan="3" class="text-center">Cuenta # {{ $client->id }}</th>
+                            <th colspan="3" class="text-center">Cuenta {{ $client->name }}</th>
                         </tr>
                         <tr>
                             <th>Item</th>

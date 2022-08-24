@@ -45,7 +45,6 @@ class StorageController extends Controller
      */
     public function store(Request $request)
     {
-        
         Storage::create([
             'name' => $request->name,
             'idCategory' => $request->idCategory,
@@ -74,9 +73,10 @@ class StorageController extends Controller
      */
     public function edit(Storage $storage)
     {
-        $storages = Storage::find($storage);
+        //$storages = Storage::find($storage);
+        //$storages
          return view('storage.edit', [
-            'storage' => $storages,
+            'storage' => $storage,
             'categories' => DB::table('categories')->get(),
         ]);
     }

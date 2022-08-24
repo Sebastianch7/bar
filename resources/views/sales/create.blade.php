@@ -47,7 +47,7 @@
               <input type="text" class="form-control" name="total" id="priceSales" value="0,00" readonly>
             </div>
           </div>
-          @csrf
+          @csrf          
           <div class="float-right">
             <button type="submit" class="btn btn-primary">Registrar</button>
       </form>

@@ -21,15 +21,15 @@ $(document).ready(function(){
     $('#available').val(cantidad);
   });
 
-  $("#cantSales").keyup(function(){
+  $("#cantSales").change(function(){
     var price = $('#idProductSales').children(":selected").attr("id");
     var a = $(this).val();
     var b = $('#available').val();
     $('#priceSales').val(parseFloat(price*a, 10).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,").toString());
-    //$('#priceSales').val(parseFloat(price*cant));
-    if(a > (b))
+    if(parseInt(a) > parseInt(b))
     {
-      $(this).val('');
+      console.log('eliminar');
+      $('#cantSales').val('');
       $('#priceSales').val('0,00');
     }
   });
